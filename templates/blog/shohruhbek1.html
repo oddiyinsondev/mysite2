@@ -1,0 +1,372 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag Uzb</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 30px;
+        }
+
+        .hero {
+            width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .r1 {
+            width: 100%;
+            height: 95px;
+            background-color: rgb(61, 126, 255);
+            display: flex;
+            align-items: center;
+        }
+
+        .r2 {
+            width: 100%;
+            height: 10px;
+            background-color: red;
+        }
+
+        .r3 {
+            width: 100%;
+            height: 90px;
+        }
+
+        .r4 {
+            width: 100%;
+            height: 95px;
+            background-color: rgb(0, 202, 0);
+        }
+
+        .flag-star {
+            width: 160px;
+            height: 80px;
+            margin-left: 30px;
+        }
+        .animation{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .h1 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop1 3s infinite backwards;
+        }
+        .h2 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop2 3s 0.25s infinite backwards;
+        }
+        .h3 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop3 3s 0.5s infinite backwards;
+
+        }
+        .h4 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop4 3s 0.75s infinite backwards;
+        }
+        .h5 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop5 3s 1s infinite backwards;
+        }
+        .h6 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop6 3s 1.25s infinite backwards;
+        }
+        .h7 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop7 3s 1.5s infinite backwards;
+        }
+        .h8 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop8 3s 1.75s infinite backwards;
+        }
+        .h9 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop9 3s 2s infinite backwards;
+        }
+        .h10 {
+            padding-top: 50px;
+            font-weight: 700;
+            font-size: 96px;
+            animation: drop10 3s 2.25s infinite backwards;
+        }
+        @keyframes drop1 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+        @keyframes drop2 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+        @keyframes drop3 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+        @keyframes drop4 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+        @keyframes drop5 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+        @keyframes drop6 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+        @keyframes drop7 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+        @keyframes drop8 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+        @keyframes drop9 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+        @keyframes drop10 {
+            0%{
+                padding-top: 70px;
+                color: red;
+            }
+            25%{
+                padding-top: 30px;
+                color: rgb(0, 4, 255);
+            }
+            50%{
+                padding-top: 70px;
+                color: rgb(0, 4, 255);
+            }
+            75%{
+                padding-top: 30px;
+                color: rgb(0, 183, 255);
+            }
+            100%{
+                padding-top: 70px;
+                color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="r1">
+            <img class="flag-star" src="{% static 'assets/images/logo/flag-star.png' %}" alt="">
+        </div>
+        <div class="r2"></div>
+        <div class="r3"></div>
+        <div class="r2"></div>
+        <div class="r4"></div>
+    </div>
+    <div class="animation">
+        <span class="h1">S</span>
+        <span class="h2">h</span>
+        <span class="h3">o</span>
+        <span class="h4">h</span>
+        <span class="h5">r</span>
+        <span class="h6">u</span>
+        <span class="h7">h</span>
+        <span class="h8">b</span>
+        <span class="h9">e</span>
+        <span class="h10">k</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ cat.name }} {% endblock %}
+{% block name %} {{ cat.name }} {% endblock %}
+{% block content %}
+
+    <!-- ====== Blog Section Start -->
+    <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
+        <div class="container">
+          <div class="flex flex-wrap -mx-4">
+           {% for post in posts %}
+
+           <div class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div class="mb-10 group wow fadeInUp" data-wow-delay=".1s">
+              <div class="rounded overflow-hidden mb-8">
+                <a href="{{ post.get_absolute_url }}" class="block">
+                    {% if post.photo %}
+                  <img
+                    src="{{ post.photo.url }}"
+                    alt="image"
+                    class="
+                      w-full
+                      transition
+                      group-hover:scale-125 group-hover:rotate-6
+                    "
+                  />
+                  {% endif %}
+                </a>
+              </div>
+              <div>
+                <span
+                  class="
+                    bg-primary
+                    rounded
+                    inline-block
+                    text-center
+                    py-1
+                    px-4
+                    text-xs
+                    leading-loose
+                    font-semibold
+                    text-white
+                    mb-5
+                  "
+                >
+                 <span>{{ post.publish|date:"d-M Y" }}</span>
+                </span>
+                <h3>
+                  <a
+                    href="{{ post.get_absolute_url }}"
+                    class="
+                      font-semibold
+                      text-xl
+                      sm:text-2xl
+                      lg:text-xl
+                      xl:text-2xl
+                      mb-4
+                      inline-block
+                      text-dark
+                      hover:text-primary
+                    "
+                  >
+                    {{ post.title }}
+                  </a>
+                </h3>
+                <p class="text-base text-body-color">
+                  {{ post.body|truncatewords:30|safe }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+           {% endfor %}
+ 
+          </div>
+          <div class="flex justify-center" >{% include 'blog/pagination.html' with page=posts %}</div>
+        </div>
+      </section>
+      <!-- ====== Blog Section End -->
+
+{% endblock %}  

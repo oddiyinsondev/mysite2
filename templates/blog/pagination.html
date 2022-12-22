@@ -1,0 +1,33 @@
+<div class="flex justify-center">
+  <nav aria-label="Page navigation example">
+    <ul class="flex list-style-none">
+       {% if page.has_previous %}
+      <li class="page-item disabled"><a
+          class="page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-gray-500 pointer-events-none focus:shadow-none"
+          href="?page={{ page.previous_page_number }}" tabindex="-1" aria-disabled="true"> &laquo;  Previous</a></li>
+          {% endif %}
+
+          {% for i in page.paginator.page_range %}
+          {% if page.number == i %}
+
+      <li class="page-item"><a
+          class="page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-dark-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+          href="">{{ i }} <span class="visually-hidden"></span> </a></li>
+       
+        {% else %}
+
+      <li class="page-item"><a
+        class="page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+        href="?page={{ i }}">{{ i }}</a></li>
+
+        {% endif %}
+        {% endfor %}
+
+        {% if page.has_next %}
+      <li class="page-item"><a  
+          class="page-link relative block py-1.5 px-3 border-0 bg-transparent outline-none transition-all duration-300 rounded-full text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none"
+          href="?page={{ page.next_page_number }}">Next &raquo;</a></li>
+          {% endif %}
+    </ul>
+  </nav>
+</div>
